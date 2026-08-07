@@ -24,7 +24,9 @@ url = "https://api.frankfurter.dev/v2/rates"
 
 query_params = {
     'base': 'USD',
-    'quotes': 'BND,KHR,IDR,LAK,MYR,MMK,PHP,SGD,THB,VND'
+    'quotes': 'BND,KHR,IDR,LAK,MYR,MMK,PHP,SGD,THB,VND',
+    'from': '2025-08-07',
+    'to': '2026-08-06'
 }
 
 records = []
@@ -33,11 +35,11 @@ records = []
 try:
     response = requests.get(url, params=query_params)
     response.raise_for_status()
-except requests.exceptions.HTTPError as e:
-    print(f"HTTP error: {e}")
+except requests.exceptions.HTTPError as http_err:
+    print(f"HTTP error: {http_err}")
     exit()
-except requests.exceptions.RequestException as f:
-    print(f"Request failed: {f}")
+except requests.exceptions.RequestException as req_err:
+    print(f"Request failed: {req_err}")
     exit()
 
 # Parse JSON
@@ -73,6 +75,5 @@ else:
 
     print(f"Prepared {len(df)} records for insertion.")
     insert_forex_rates(df)
-
 
 
