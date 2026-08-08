@@ -1,6 +1,10 @@
 # ASEAN Exchange Rate Analytics
 This project collects daily exchange rates for ASEAN currencies (using USD as the base currency), stores them in PostgreSQL via AWS RDS, and visualizes insights in Power BI. 
 
+## Architecture
+This project’s architecture follows an ETL pipeline design, where data is extracted via batch and daily ingestion processes, transformed through preprocessing logic, and loaded into an AWS RDS PostgreSQL database for visualization in Power BI.
+
+
 ## Covered Currencies and Countries
 The ETL pipeline tracks and analyzes the official legal tenders of member states:
 - Brunei Darussalam — Brunei Dollar (BND)
