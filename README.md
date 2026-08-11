@@ -1,8 +1,8 @@
 # ASEAN Exchange Rate Analytics
-This project collects daily exchange rates for ASEAN currencies (using USD as the base currency), stores them in PostgreSQL via AWS RDS, and visualizes insights in Power BI. 
+This project collects daily exchange rates for ASEAN currencies (using USD as the base currency), uses S3 as its landing zone, transforms and enriches with Glue, loads into RDS PostgreSQL for further enriching, and visualized via QuickSight.
+, stores them in PostgreSQL via AWS RDS, and visualizes insights in Power BI. 
 
 ## Architecture
-This project’s architecture follows an ETL pipeline design, where data is extracted via batch and daily ingestion processes, transformed through preprocessing logic, and loaded into an AWS RDS PostgreSQL database for visualization in Power BI.
 ![Architecture Diagram](assets/project_architecture.jpg)
 
 ## Covered Currencies and Countries
@@ -21,12 +21,7 @@ The ETL pipeline tracks and analyzes the official legal tenders of member states
 ## Features
 - Automated daily ETL pipeline 
 - SQL queries for business insights
-- Interactive Power BI dashboards
-
-In addition to daily updates, the project will also backfill one year of historical exchange rate data. This allows deeper insights such as:
-- Year-over-year comparisons
-- Identifying long-term currency trends
-- More robust volatility analysis
+- Interactive dashboard
 
 
 
