@@ -3,7 +3,7 @@ This project collects daily exchange rates for ASEAN currencies (using USD as th
 
 ## Architecture
 This project’s architecture follows an ETL pipeline design, where data is extracted via batch and daily ingestion processes, transformed through preprocessing logic, and loaded into an AWS RDS PostgreSQL database for visualization in Power BI.
-![Architecture Diagram](assets/architecture.jpg)
+![Architecture Diagram](assets/Architecture.jpg)
 
 ## Covered Currencies and Countries
 The ETL pipeline tracks and analyzes the official legal tenders of member states:
