@@ -5,6 +5,12 @@ This project collects daily exchange rates for ASEAN currencies (using USD as th
 ## Architecture
 ![Architecture Diagram](assets/project_architecture.jpg)
 
+## Other AWS Services Utilized During the Creation of this Project
+- IAM
+- CloudWatch
+- VPC
+- Athena
+
 ## Covered Currencies and Countries
 The ETL pipeline tracks and analyzes the official legal tenders of member states:
 - Brunei Darussalam — Brunei Dollar (BND)
