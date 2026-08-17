@@ -3,7 +3,7 @@ This project collects daily exchange rates for ASEAN currencies (using USD as th
 , stores them in PostgreSQL via AWS RDS, and visualizes insights in Power BI. 
 
 ## Architecture
-![Architecture Diagram](assets/project_architecture.jpg)
+![Architecture Diagram](assets/project_pipeline.jpg)
 
 ## Other AWS Services Utilized During the Creation of this Project
 - IAM
