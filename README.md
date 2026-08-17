@@ -1,18 +1,8 @@
 # ASEAN Exchange Rate Analytics
-This project collects daily exchange rates for ASEAN currencies (using USD as the base currency), uses S3 as its landing zone, transforms and enriches with Glue, loads into RDS PostgreSQL for further enriching, and visualized via QuickSight.
-, stores them in PostgreSQL via AWS RDS, and visualizes insights in Power BI. 
-
-## Architecture
-![Architecture Diagram](assets/project_pipeline.jpg)
-
-## Other AWS Services Utilized During the Creation of this Project
-- IAM
-- CloudWatch
-- VPC
-- Athena
+An end-to-end data pipeline that ingests daily USD-to-ASEAN-currency exchange rates (sourced from Frankfurter API), transforms and loads them into PostgreSQL, and surfaces them through interactive dashboards for currency trend analysis. Built entirely on AWS, the pipeline runs on a daily schedule. From raw API  ingestion through to analytics-ready visualizations, no manual intervention is required.
 
 ## Covered Currencies and Countries
-The ETL pipeline tracks and analyzes the official legal tenders of member states:
+The ETL pipeline tracks and analyzes the official legal tenders of ASEAN member states:
 - Brunei Darussalam — Brunei Dollar (BND)
 - Cambodia — Cambodian Riel (KHR)
 - Indonesia — Indonesian Rupiah (IDR)
@@ -22,12 +12,19 @@ The ETL pipeline tracks and analyzes the official legal tenders of member states
 - Philippines — Philippine Peso (PHP)
 - Singapore — Singapore Dollar (SGD)
 - Thailand — Thai Baht (THB)
-- Vietnamese — Vietnamese Dong (VND)
+- Vietnam — Vietnamese Dong (VND)
 
-## Features
-- Automated daily ETL pipeline 
-- SQL queries for business insights
-- Interactive dashboard
+## Architecture
+![Architecture Diagram](assets/project_pipeline.jpg)
+
+## Other AWS Services Utilized
+- **IAM** — scoped permissions for Lambda, Glue, and EventBridge
+- **CloudWatch** — logging and debugging for Lambda and Glue job runs
+- **VPC** — secured network access between Glue and the RDS PostgreSQL instance
+- **Athena** — ad hoc querying of the S3 data lake during development and validation
+
+
+
 
 
 
