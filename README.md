@@ -1,6 +1,12 @@
 # ASEAN Exchange Rate Analytics
 An end-to-end data pipeline that ingests daily USD-to-ASEAN-currency exchange rates (sourced from Frankfurter API), transforms and loads them into PostgreSQL, and surfaces them through interactive dashboards for currency trend analysis. Built entirely on AWS, the pipeline runs on a daily schedule. From raw API  ingestion through to analytics-ready visualizations, no manual intervention is required.
 
+## Tech Stack
+- **Data Engineering:** Python, PostgreSQL, Docker
+- **Cloud:** AWS Lambda, EventBridge, S3, Glue, RDS, Athena, IAM, CloudWatch, VPC
+- **Analytics & Visualization:** Power BI
+- **Data Source:** Frankfurter API
+
 ## Covered Currencies and Countries
 The ETL pipeline tracks and analyzes the official legal tenders of ASEAN member states:
 - Brunei Darussalam — Brunei Dollar (BND)
