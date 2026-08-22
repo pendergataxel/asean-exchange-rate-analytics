@@ -1,4 +1,4 @@
-# Power BI Dashboard
+# Power BI Visualization
 
 The Power BI dashboard provides analysis of ASEAN foreign exchange rates sourced from the project's Gold data layer in PostgreSQL.
 
